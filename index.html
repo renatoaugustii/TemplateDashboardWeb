@@ -336,11 +336,105 @@
                     </button>
                   </div>
                   <div class="p-2">
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="tooltip"
-                      data-bs-title="Cadastrar novo cliente">
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                      data-bs-target="#ExtralargeModal" data-bs-title="Cadastrar novo cliente">
                       <i class="bi bi-person-plus me-2"></i>
                       Novo
                     </button>
+                    <div class="modal fade" id="ExtralargeModal" tabindex="-1">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title text-primary">Cadastro de clientes</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                               <!-- No Labels Form -->
+                              <form class="row g-3">
+                                <div class="col-md-6">
+                                  <input type="text" class="form-control" placeholder="Nome do cliente">
+                                </div>
+                                <div class="col-md-6">
+                                  <input type="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="col-md-4">
+                                  <input type="text" class="form-control" placeholder="Telefone">
+                                </div>
+                                <div class="col-md-3">
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                    <label class="form-check-label" for="inlineRadio1">CPF</label>
+                                  </div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">CNPJ</label>
+                                  </div>
+                                  </div>
+                                <div class="col-md-5">
+                                  <input type="text" class="form-control" placeholder="CPF/CNPJ">
+                                </div>
+                                <div class="col-12">
+                                  <input type="text" class="form-control" placeholder="Observação">
+                                </div>
+                                <div class="col-md-6">
+                                  <input type="text" class="form-control" placeholder="Data Nascimento">
+                                </div>
+                                <div class="col-md-6">
+                                  <select id="inputState" class="form-select">
+                                    <option>Instagram</option>
+                                    <option selected>Google</option>
+                                    <option>Facebook</option>
+                                    <option>Indicação</option>
+                                  </select>
+                                </div>
+                                <hr>
+                                  <h6 class="modal-title mt-0 pt-0 text-primary">Endereço</h6>
+                                  <div class="col-md-4">
+                                    <div class="input-group">
+                                      <input type="text" class="form-control" placeholder="CEP" aria-label="CEP" aria-describedby="button-addon2">
+                                      <button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Rua">
+                                  </div>
+                                  <div class="col-md-2">
+                                    <input type="text" class="form-control" placeholder="Número">
+                                  </div>
+
+                                  <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Complemento">
+                                  </div>
+                                  <div class="col-md-3">
+                                    <input type="text" class="form-control" placeholder="Bairro">
+                                  </div>
+                                  <div class="col-md-4">
+                                    <input type="text" class="form-control" placeholder="Cidade">
+                                  </div>
+                                  <div class="col-md-1">
+                                    <input type="text" class="form-control" placeholder="UF">
+                                  </div>
+                                  <hr>
+                                  <h6 class="modal-title mt-2 pt-2 text-primary">Dados adicionais</h6>
+                                 
+                                  <div class="col-12">
+                                    <div class="input-group mb-3 mt-0">
+                                      <div class="input-group-text">
+                                        <i class="bi bi-alarm-fill text-danger me-2"></i>
+                                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                      </div>
+                                      <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder=" Digite aqui uma mensagem para ser exibida como alerta do cliente!">
+                                    </div>
+                                  </div>
+                              </form><!-- End No Labels Form -->
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                            <button type="button" class="btn btn-outline-success">Salvar</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -441,15 +535,12 @@
                   <td>47</td>
                   <td>2011-04-19</td>
                 </tr>
-                
+
               </tbody>
             </table>
             <!-- End Table with stripped rows -->
-            <!-- End Table with stripped rows -->
-
           </div>
         </div>
-
       </div>
     </section>
   </main><!-- End #main -->
