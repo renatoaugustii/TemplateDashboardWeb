@@ -27,6 +27,8 @@
   <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template JS API File -->
+  <script src="assets/js/scripts.js" defer></script>
 </head>
 
 <body>
@@ -195,7 +197,7 @@
       <li class="nav-heading">Ponto de Vendas</li>
 
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link collapsed" href="#">
           <i class="bi bi-house"></i>
           <span>Home</span>
         </a>
@@ -240,14 +242,14 @@
       <li class="nav-heading">Cadastros</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link  collapsed" href="clientes.html">
           <i class="bi bi-people"></i>
           <span>Clientes</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#">
+        <a class="nav-link" href="parceiros.html">
           <i class="bi bi-award"></i>
           <span>Parceiros</span>
         </a>
@@ -310,11 +312,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Clientes</h1>
+      <h1>Parceiros</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Clientes</li>
+          <li class="breadcrumb-item active">Parceiros</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -325,7 +327,7 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-4">
-                <h5 class="card-title">Tebela <span> | Todos os Clientes</span></h5>
+                <h5 class="card-title">Tebela <span> | Todos os Parceiros</span></h5>
               </div>
               <div class="col-md-4 offset-md-4 p-4">
                 <div class="d-flex flex-row-reverse">
@@ -345,93 +347,98 @@
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title text-primary">Cadastro de clientes</h5>
+                            <h5 class="modal-title" style="color:#00196A;">Cadastro de parceiros</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
                                <!-- No Labels Form -->
-                              <form class="row g-3">
+                              <form id="ADDRESS-FORM" class="row g-3 needs-validation" novalidate>
                                 <div class="col-md-6">
-                                  <input type="text" class="form-control" placeholder="Nome do cliente">
+                                  <label for="inputName5" class="form-label"><small>Nome Empresa</small></label>
+                                  <input type="text" class="form-control" placeholder="" required>
                                 </div>
                                 <div class="col-md-6">
-                                  <input type="email" class="form-control" placeholder="Email">
-                                </div>
-                                <div class="col-md-4">
-                                  <input type="text" class="form-control" placeholder="Telefone">
+                                  <label for="inputName5" class="form-label"><small>Responsável</small></label>
+                                  <input type="text" class="form-control" placeholder="">
                                 </div>
                                 <div class="col-md-3">
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                                    <label class="form-check-label" for="inlineRadio1">CPF</label>
+                                  <label for="inputName5" class="form-label"><small>Telefone 1</small></label>
+                                  <input type="tel" class="form-control" maxlength="15" onkeyup="handlePhone(event)" placeholder="" required>
+                                </div>
+                                <div class="col-md-3">
+                                  <label for="inputName5" class="form-label"><small>Telefone 2</small></label>
+                                  <input type="tel" class="form-control" maxlength="15" onkeyup="handlePhone(event)" placeholder="" required>
+                                </div>
+                                <div class="col-md-3 align-middle">
+                                  <label for="inputName5" class="form-label"><small>Tipo de Pessoa</small></label>
+                                  <div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                      <label class="form-check-label" for="inlineRadio1">CPF</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                      <label class="form-check-label" for="inlineRadio2">CNPJ</label>
+                                    </div>
                                   </div>
-                                  <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                    <label class="form-check-label" for="inlineRadio2">CNPJ</label>
-                                  </div>
-                                  </div>
-                                <div class="col-md-5">
-                                  <input type="text" class="form-control" placeholder="CPF/CNPJ">
+                                 
                                 </div>
-                                <div class="col-12">
-                                  <input type="text" class="form-control" placeholder="Observação">
+                                <div class="col-md-3">
+                                  <label for="inputName5" class="form-label"><small>CPF / CNPJ</small></label>
+                                  <input type="text" class="form-control" placeholder="" maxlength="14">
                                 </div>
-                                <div class="col-md-6">
-                                  <input type="text" class="form-control" placeholder="Data Nascimento">
-                                </div>
-                                <div class="col-md-6">
-                                  <select id="inputState" class="form-select">
-                                    <option>Instagram</option>
-                                    <option selected>Google</option>
-                                    <option>Facebook</option>
-                                    <option>Indicação</option>
-                                  </select>
-                                </div>
+                                
                                 <hr>
-                                  <h6 class="modal-title mt-0 pt-0 text-primary">Endereço</h6>
+                                  <h6 class="modal-title mt-0 pt-0 " style="color:#00196A;">Endereço</h6>
+                                  <!-- Iniciando formulário de consulta de CEP -->
                                   <div class="col-md-4">
+                                    <label for="inputName5" class="form-label"><small>Cep</small></label>
                                     <div class="input-group">
-                                      <input type="text" class="form-control" placeholder="CEP" aria-label="CEP" aria-describedby="button-addon2">
-                                      <button class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                                      <input id="CEP" name="CEP" type="text" class="form-control" placeholder="" aria-label="CEP" aria-describedby="button-addon2" maxlength="8" required>
+                                      <button onclick="buscar_cep()" class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
                                     </div>
                                   </div>
                                   <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Rua">
+                                    <label for="inputName5" class="form-label"><small>Rua</small></label>
+                                    <input id="logradouro" name="logradouro" type="text" class="form-control" placeholder="" required>
                                   </div>
                                   <div class="col-md-2">
-                                    <input type="text" class="form-control" placeholder="Número">
+                                    <label for="inputName5" class="form-label"><small>Número</small></label>
+                                    <input id="NUMERO" name="NUMERO" type="text" class="form-control" placeholder="" required>
                                   </div>
 
-                                  <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="Complemento">
+                                  <div class="col-md-3">
+                                    <label for="inputName5" class="form-label"><small>Complemento</small></label>
+                                    <input  id="complemento" type="text" class="form-control" placeholder="">
                                   </div>
                                   <div class="col-md-3">
-                                    <input type="text" class="form-control" placeholder="Bairro">
+                                    <label for="inputName5" class="form-label"><small>Bairro</small></label>
+                                    <input id="bairro" name="bairro" type="text" class="form-control" placeholder="" required>
                                   </div>
                                   <div class="col-md-4">
-                                    <input type="text" class="form-control" placeholder="Cidade">
+                                    <label for="inputName5" class="form-label"><small>Cidade</small></label>
+                                    <input id="localidade" name="localidade" type="text" class="form-control" placeholder="" required>
                                   </div>
-                                  <div class="col-md-1">
-                                    <input type="text" class="form-control" placeholder="UF">
+                                  <div class="col-md-2">
+                                    <label for="inputName5" class="form-label"><small>UF</small></label>
+                                    <input id="uf" NAME="uf" type="text" class="form-control" placeholder="" required>
                                   </div>
                                   <hr>
-                                  <h6 class="modal-title mt-2 pt-2 text-primary">Dados adicionais</h6>
+                                  <h6 class="modal-title mt-2 pt-2" style="color:#00196A;">Dados adicionais</h6>
                                  
                                   <div class="col-12">
+                                    <label for="inputName5" class="form-label"><small>Observação</small></label>
                                     <div class="input-group mb-3 mt-0">
-                                      <div class="input-group-text">
-                                        <i class="bi bi-alarm-fill text-danger me-2"></i>
-                                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-                                      </div>
-                                      <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder=" Digite aqui uma mensagem para ser exibida como alerta do cliente!">
+                                      <input type="text" class="form-control" maxlength="50" placeholder="">
                                     </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                                    <button type="submit" class="btn btn-outline-success">Salvar</button>
                                   </div>
                               </form><!-- End No Labels Form -->
                           </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                            <button type="button" class="btn btn-outline-success">Salvar</button>
-                          </div>
+
                         </div>
                       </div>
                     </div>

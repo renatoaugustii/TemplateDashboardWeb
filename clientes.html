@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sistema LavaMalu 1.0.0</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template JS API File -->
+  <script src="assets/js/scripts.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <span class="d-none d-lg-block">LavaMalu</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="fs-4 bi bi-bell"></i>
+            <span class="badge bg-danger badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item me-4">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <i class="fs-4 bi bi-question-circle rounded-circle" alt="Help"></i>
+          </a><!-- End Help Icon -->
+        </li>
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <i class="fs-4 bi bi-person-circle" alt="Profile"></i>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Administrador</span>
+          </a><!-- End Profile Image Icon -->
+
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Administrador</h6>
+              <span>Nível 3</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-person"></i>
+                <span>Meu Perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-bug"></i>
+                <span>Report Erro</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-heading">Ponto de Vendas</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-house"></i>
+          <span>Home</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-cart4"></i>
+          <span>Vender</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-upload"></i>
+          <span>Entregar</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-currency-dollar"></i>
+          <span>Pagamento</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-archive"></i>
+          <span>Inventário</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-truck"></i>
+          <span>Delivery</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-heading">Cadastros</li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="clientes.html">
+          <i class="bi bi-people"></i>
+          <span>Clientes</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="parceiros.html">
+          <i class="bi bi-award"></i>
+          <span>Parceiros</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-box"></i>
+          <span>Produtos</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-flag"></i>
+          <span>Promoções</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-tag"></i>
+          <span>Categorias</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-bookmark"></i>
+          <span>Marcas</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-x-octagon"></i>
+          <span>Defeitos</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+      <li class="nav-heading">Gerencial</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-speedometer2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+          <span>Relatórios</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Clientes</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active">Clientes</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+      <div class="row">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <h5 class="card-title">Tebela <span> | Todos os Clientes</span></h5>
+              </div>
+              <div class="col-md-4 offset-md-4 p-4">
+                <div class="d-flex flex-row-reverse">
+                  <div class="p-2 ">
+                    <button type="button" class="btn btn-outline-secondary  d-none d-lg-block" data-bs-toggle="tooltip"
+                      data-bs-title="Imprimir Tabela">
+                      <i class="bi bi-printer"></i>
+                    </button>
+                  </div>
+                  <div class="p-2">
+                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
+                      data-bs-target="#ExtralargeModal" data-bs-title="Cadastrar novo cliente">
+                      <i class="bi bi-person-plus me-2"></i>
+                      Novo
+                    </button>
+                    <div class="modal fade" id="ExtralargeModal" tabindex="-1">
+                      <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" style="color:#00196A;">Cadastro de Parceiros</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                          </div>
+                          <div class="modal-body">
+                               <!-- No Labels Form -->
+                              <form id="ADDRESS-FORM" class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-6">
+                                  <label for="inputName5" class="form-label"><small>Nome</small></label>
+                                  <input type="text" class="form-control" placeholder="" required>
+                                </div>
+                                <div class="col-md-6">
+                                  <label for="inputName5" class="form-label"><small>E-mail</small></label>
+                                  <input type="email" class="form-control" placeholder="">
+                                </div>
+                                <div class="col-md-4">
+                                  <label for="inputName5" class="form-label"><small>Telefone</small></label>
+                                  <input type="tel" class="form-control" maxlength="15" onkeyup="handlePhone(event)" placeholder="" required>
+                                </div>
+                                <div class="col-md-3">
+                                  <label for="inputName5" class="form-label"><small>Tipo de Pessoa</small></label>
+                                  <div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                                      <label class="form-check-label" for="inlineRadio1">CPF</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                      <label class="form-check-label" for="inlineRadio2">CNPJ</label>
+                                    </div>
+                                  </div>
+                                 
+                                </div>
+                                <div class="col-md-5">
+                                  <label for="inputName5" class="form-label"><small>CPF / CNPJ</small></label>
+                                  <input type="text" class="form-control" placeholder="" maxlength="14">
+                                </div>
+                                <div class="col-12">
+                                  <label for="inputName5" class="form-label"><small>Observação</small></label>
+                                  <input type="text" class="form-control" placeholder="" maxlength="25" >
+                                </div>
+                                <div class="col-md-3 pe-2">
+                                  <label for="inputName5" class="form-label"><small>Data Nascimento</small></label>
+                                  <input type="date" class="form-control" placeholder="" >
+                                </div>
+                                <div class="col-md-3 pe-3">
+                                  <label for="inputName5" class="form-label"><small>Indicação</small></label>
+                                  <select id="inputState" class="form-select">
+                                    <option>Instagram</option>
+                                    <option selected>Google</option>
+                                    <option>Facebook</option>
+                                    <option>Indicação</option>
+                                    <option>Nenhum</option>
+                                  </select>
+                                </div>
+                                <div class="col-md-5 form-switch ms-2 align-middle">
+                                  <label for="inputName5" class="form-label"><small>Cliente aceita receber notificação?</small></label>
+                                  <div class="align-middle text-center">
+                                    <input class="form-check-input me-2" type="checkbox" id="flexSwitchCheckDefault">
+                                    <label class="form-check-label" for="flexSwitchCheckDefault"><p class="small align-middle">Aceitar</p></label>
+                                  </div>
+                                </div>
+                                <hr>
+                                  <h6 class="modal-title mt-0 pt-0 " style="color:#00196A;">Endereço</h6>
+                                  <!-- Iniciando formulário de consulta de CEP -->
+                                  <div class="col-md-4">
+                                    <label for="inputName5" class="form-label"><small>Cep</small></label>
+                                    <div class="input-group">
+                                      <input id="CEP" name="CEP" type="text" class="form-control" placeholder="" aria-label="CEP" aria-describedby="button-addon2" maxlength="8" required>
+                                      <button onclick="buscar_cep()" class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
+                                    </div>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <label for="inputName5" class="form-label"><small>Rua</small></label>
+                                    <input id="logradouro" name="logradouro" type="text" class="form-control" placeholder="" required>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <label for="inputName5" class="form-label"><small>Número</small></label>
+                                    <input id="NUMERO" name="NUMERO" type="text" class="form-control" placeholder="" required>
+                                  </div>
+
+                                  <div class="col-md-3">
+                                    <label for="inputName5" class="form-label"><small>Complemento</small></label>
+                                    <input  id="complemento" type="text" class="form-control" placeholder="">
+                                  </div>
+                                  <div class="col-md-3">
+                                    <label for="inputName5" class="form-label"><small>Bairro</small></label>
+                                    <input id="bairro" name="bairro" type="text" class="form-control" placeholder="" required>
+                                  </div>
+                                  <div class="col-md-4">
+                                    <label for="inputName5" class="form-label"><small>Cidade</small></label>
+                                    <input id="localidade" name="localidade" type="text" class="form-control" placeholder="" required>
+                                  </div>
+                                  <div class="col-md-2">
+                                    <label for="inputName5" class="form-label"><small>UF</small></label>
+                                    <input id="uf" NAME="uf" type="text" class="form-control" placeholder="" required>
+                                  </div>
+                                  <hr>
+                                  <h6 class="modal-title mt-2 pt-2" style="color:#00196A;">Dados adicionais</h6>
+                                 
+                                  <div class="col-12">
+                                    <div class="input-group mb-3 mt-0">
+                                      <div class="input-group-text">
+                                        <i class="bi bi-alarm-fill text-secondary me-2"></i>
+                                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                                      </div>
+                                      <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Marque a caixa ao lado e digite uma mensagem de alerta!">
+                                    </div>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                                    <button type="submit" class="btn btn-outline-success">Salvar</button>
+                                  </div>
+                              </form><!-- End No Labels Form -->
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Table with stripped rows -->
+            <table class="table datatable">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Position</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Start Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Brandon Jacob</td>
+                  <td>Designer</td>
+                  <td>28</td>
+                  <td>2016-05-25</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Bridie Kessler</td>
+                  <td>Developer</td>
+                  <td>35</td>
+                  <td>2014-12-05</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Ashleigh Langosh</td>
+                  <td>Finance</td>
+                  <td>45</td>
+                  <td>2011-08-12</td>
+                </tr>
+                <tr>
+                  <th scope="row">4</th>
+                  <td>Angus Grady</td>
+                  <td>HR</td>
+                  <td>34</td>
+                  <td>2012-06-11</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Raheem Lehner</td>
+                  <td>Dynamic Division Officer</td>
+                  <td>47</td>
+                  <td>2011-04-19</td>
+                </tr>
+
+              </tbody>
+            </table>
+            <!-- End Table with stripped rows -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      Desenvolvido por <strong><span>Rebot</span></strong> &copy; 2023
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
