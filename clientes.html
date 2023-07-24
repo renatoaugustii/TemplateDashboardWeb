@@ -347,119 +347,133 @@
                       <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                           <div class="modal-header">
-                            <h5 class="modal-title" style="color:#00196A;">Cadastro de Parceiros</h5>
+                            <h5 class="modal-title" style="color:#00196A;">Cadastro de clientes</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                               <!-- No Labels Form -->
-                              <form id="ADDRESS-FORM" class="row g-3 needs-validation" novalidate>
-                                <div class="col-md-6">
-                                  <label for="inputName5" class="form-label"><small>Nome</small></label>
-                                  <input type="text" class="form-control" placeholder="" required>
-                                </div>
-                                <div class="col-md-6">
-                                  <label for="inputName5" class="form-label"><small>E-mail</small></label>
-                                  <input type="email" class="form-control" placeholder="">
-                                </div>
-                                <div class="col-md-4">
-                                  <label for="inputName5" class="form-label"><small>Telefone</small></label>
-                                  <input type="tel" class="form-control" maxlength="15" onkeyup="handlePhone(event)" placeholder="" required>
-                                </div>
-                                <div class="col-md-3">
-                                  <label for="inputName5" class="form-label"><small>Tipo de Pessoa</small></label>
-                                  <div>
-                                    <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                                      <label class="form-check-label" for="inlineRadio1">CPF</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                      <label class="form-check-label" for="inlineRadio2">CNPJ</label>
-                                    </div>
+                            <!-- No Labels Form -->
+                            <form id="ADDRESS-FORM" class="row g-3 needs-validation" novalidate>
+                              <div class="col-md-6">
+                                <label for="inputName5" class="form-label"><small>Nome</small></label>
+                                <input type="text" class="form-control" placeholder="" required>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputName5" class="form-label"><small>E-mail</small></label>
+                                <input type="email" class="form-control" placeholder="">
+                              </div>
+                              <div class="col-md-4">
+                                <label for="inputName5" class="form-label"><small>Telefone</small></label>
+                                <input type="tel" class="form-control" maxlength="15" onkeyup="handlePhone(event)"
+                                  placeholder="" required>
+                              </div>
+                              <div class="col-md-3">
+                                <label for="inputName5" class="form-label"><small>Tipo de Pessoa</small></label>
+                                <div>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                      id="inlineRadio1" value="option1" checked>
+                                    <label class="form-check-label" for="inlineRadio1">CPF</label>
                                   </div>
-                                 
-                                </div>
-                                <div class="col-md-5">
-                                  <label for="inputName5" class="form-label"><small>CPF / CNPJ</small></label>
-                                  <input type="text" class="form-control" placeholder="" maxlength="14">
-                                </div>
-                                <div class="col-12">
-                                  <label for="inputName5" class="form-label"><small>Observação</small></label>
-                                  <input type="text" class="form-control" placeholder="" maxlength="25" >
-                                </div>
-                                <div class="col-md-3 pe-2">
-                                  <label for="inputName5" class="form-label"><small>Data Nascimento</small></label>
-                                  <input type="date" class="form-control" placeholder="" >
-                                </div>
-                                <div class="col-md-3 pe-3">
-                                  <label for="inputName5" class="form-label"><small>Indicação</small></label>
-                                  <select id="inputState" class="form-select">
-                                    <option>Instagram</option>
-                                    <option selected>Google</option>
-                                    <option>Facebook</option>
-                                    <option>Indicação</option>
-                                    <option>Nenhum</option>
-                                  </select>
-                                </div>
-                                <div class="col-md-5 form-switch ms-2 align-middle">
-                                  <label for="inputName5" class="form-label"><small>Cliente aceita receber notificação?</small></label>
-                                  <div class="align-middle text-center">
-                                    <input class="form-check-input me-2" type="checkbox" id="flexSwitchCheckDefault">
-                                    <label class="form-check-label" for="flexSwitchCheckDefault"><p class="small align-middle">Aceitar</p></label>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                      id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">CNPJ</label>
                                   </div>
                                 </div>
-                                <hr>
-                                  <h6 class="modal-title mt-0 pt-0 " style="color:#00196A;">Endereço</h6>
-                                  <!-- Iniciando formulário de consulta de CEP -->
-                                  <div class="col-md-4">
-                                    <label for="inputName5" class="form-label"><small>Cep</small></label>
-                                    <div class="input-group">
-                                      <input id="CEP" name="CEP" type="text" class="form-control" placeholder="" aria-label="CEP" aria-describedby="button-addon2" maxlength="8" required>
-                                      <button onclick="buscar_cep()" class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <label for="inputName5" class="form-label"><small>Rua</small></label>
-                                    <input id="logradouro" name="logradouro" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <div class="col-md-2">
-                                    <label for="inputName5" class="form-label"><small>Número</small></label>
-                                    <input id="NUMERO" name="NUMERO" type="text" class="form-control" placeholder="" required>
-                                  </div>
 
-                                  <div class="col-md-3">
-                                    <label for="inputName5" class="form-label"><small>Complemento</small></label>
-                                    <input  id="complemento" type="text" class="form-control" placeholder="">
+                              </div>
+                              <div class="col-md-5">
+                                <label for="inputName5" class="form-label"><small>CPF / CNPJ</small></label>
+                                <input type="text" class="form-control" placeholder="" maxlength="14">
+                              </div>
+                              <div class="col-12">
+                                <label for="inputName5" class="form-label"><small>Observação</small></label>
+                                <input type="text" class="form-control" placeholder="" maxlength="25">
+                              </div>
+                              <div class="col-md-3 pe-2">
+                                <label for="inputName5" class="form-label"><small>Data Nascimento</small></label>
+                                <input type="date" class="form-control" placeholder="">
+                              </div>
+                              <div class="col-md-3 pe-3">
+                                <label for="inputName5" class="form-label"><small>Indicação</small></label>
+                                <select id="inputState" class="form-select">
+                                  <option>Instagram</option>
+                                  <option selected>Google</option>
+                                  <option>Facebook</option>
+                                  <option>Indicação</option>
+                                  <option>Nenhum</option>
+                                </select>
+                              </div>
+                              <div class="col-md-5 form-switch ms-2 align-middle">
+                                <label for="inputName5" class="form-label"><small>Cliente aceita receber
+                                    notificação?</small></label>
+                                <div class="align-middle text-center">
+                                  <input class="form-check-input me-2" type="checkbox" id="flexSwitchCheckDefault">
+                                  <label class="form-check-label" for="flexSwitchCheckDefault">
+                                    <p class="small align-middle">Aceitar</p>
+                                  </label>
+                                </div>
+                              </div>
+                              <hr>
+                              <h6 class="modal-title mt-0 pt-0 " style="color:#00196A;">Endereço</h6>
+                              <!-- Iniciando formulário de consulta de CEP -->
+                              <div class="col-md-4">
+                                <label for="inputName5" class="form-label"><small>Cep</small></label>
+                                <div class="input-group">
+                                  <input id="CEP" name="CEP" type="text" class="form-control" placeholder=""
+                                    aria-label="CEP" aria-describedby="button-addon2" maxlength="8" required>
+                                  <button onclick="buscar_cep()" class="btn btn-outline-primary" type="button"
+                                    id="button-addon2"><i class="bi bi-search"></i></button>
+                                </div>
+                              </div>
+                              <div class="col-md-6">
+                                <label for="inputName5" class="form-label"><small>Rua</small></label>
+                                <input id="logradouro" name="logradouro" type="text" class="form-control" placeholder=""
+                                  required>
+                              </div>
+                              <div class="col-md-2">
+                                <label for="inputName5" class="form-label"><small>Número</small></label>
+                                <input id="NUMERO" name="NUMERO" type="text" class="form-control" placeholder=""
+                                  required>
+                              </div>
+
+                              <div class="col-md-3">
+                                <label for="inputName5" class="form-label"><small>Complemento</small></label>
+                                <input id="complemento" type="text" class="form-control" placeholder="">
+                              </div>
+                              <div class="col-md-3">
+                                <label for="inputName5" class="form-label"><small>Bairro</small></label>
+                                <input id="bairro" name="bairro" type="text" class="form-control" placeholder=""
+                                  required>
+                              </div>
+                              <div class="col-md-4">
+                                <label for="inputName5" class="form-label"><small>Cidade</small></label>
+                                <input id="localidade" name="localidade" type="text" class="form-control" placeholder=""
+                                  required>
+                              </div>
+                              <div class="col-md-2">
+                                <label for="inputName5" class="form-label"><small>UF</small></label>
+                                <input id="uf" NAME="uf" type="text" class="form-control" placeholder="" required>
+                              </div>
+                              <hr>
+                              <h6 class="modal-title mt-2 pt-2" style="color:#00196A;">Dados adicionais</h6>
+
+                              <div class="col-12">
+                                <div class="input-group mb-3 mt-0">
+                                  <div class="input-group-text">
+                                    <i class="bi bi-alarm-fill text-secondary me-2"></i>
+                                    <input class="form-check-input mt-0" type="checkbox" value=""
+                                      aria-label="Checkbox for following text input">
                                   </div>
-                                  <div class="col-md-3">
-                                    <label for="inputName5" class="form-label"><small>Bairro</small></label>
-                                    <input id="bairro" name="bairro" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <label for="inputName5" class="form-label"><small>Cidade</small></label>
-                                    <input id="localidade" name="localidade" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <div class="col-md-2">
-                                    <label for="inputName5" class="form-label"><small>UF</small></label>
-                                    <input id="uf" NAME="uf" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <hr>
-                                  <h6 class="modal-title mt-2 pt-2" style="color:#00196A;">Dados adicionais</h6>
-                                 
-                                  <div class="col-12">
-                                    <div class="input-group mb-3 mt-0">
-                                      <div class="input-group-text">
-                                        <i class="bi bi-alarm-fill text-secondary me-2"></i>
-                                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
-                                      </div>
-                                      <input type="text" class="form-control" aria-label="Text input with checkbox" placeholder="Marque a caixa ao lado e digite uma mensagem de alerta!">
-                                    </div>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                                    <button type="submit" class="btn btn-outline-success">Salvar</button>
-                                  </div>
-                              </form><!-- End No Labels Form -->
+                                  <input type="text" class="form-control" aria-label="Text input with checkbox"
+                                    placeholder="Marque a caixa ao lado e digite uma mensagem de alerta!">
+                                </div>
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
+                                <button type="submit" class="btn btn-outline-success">Salvar</button>
+                              </div>
+                            </form><!-- End No Labels Form -->
                           </div>
 
                         </div>
@@ -470,104 +484,40 @@
               </div>
             </div>
             <!-- Table with stripped rows -->
-            <table class="table datatable">
-              <thead>
-                <tr>
-                  <th scope="col">#</th>
-                  <th scope="col">Name</th>
-                  <th scope="col">Position</th>
-                  <th scope="col">Age</th>
-                  <th scope="col">Start Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Brandon Jacob</td>
-                  <td>Designer</td>
-                  <td>28</td>
-                  <td>2016-05-25</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Bridie Kessler</td>
-                  <td>Developer</td>
-                  <td>35</td>
-                  <td>2014-12-05</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Ashleigh Langosh</td>
-                  <td>Finance</td>
-                  <td>45</td>
-                  <td>2011-08-12</td>
-                </tr>
-                <tr>
-                  <th scope="row">4</th>
-                  <td>Angus Grady</td>
-                  <td>HR</td>
-                  <td>34</td>
-                  <td>2012-06-11</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
-                <tr>
-                  <th scope="row">5</th>
-                  <td>Raheem Lehner</td>
-                  <td>Dynamic Division Officer</td>
-                  <td>47</td>
-                  <td>2011-04-19</td>
-                </tr>
+            <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
 
-              </tbody>
-            </table>
+              <div class="datatable-container">
+                <table class="table datatable table-hover">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Nome</th>
+                      <th scope="col">Telefone</th>
+                      <th scope="col">Nascimento</th>
+                      <th scope="col">Desde</th>
+                      <th scope="col">Origem</th>
+                      <th scope="col">Bairro</th>
+                      <th scope="col">Alerta</th>
+                      <th scope="col">Ação</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                    <th scope="row">1</th>
+                      <td>Brandon Jacob</td>
+                      <td>(31) 999301215</td>
+                      <td>12/01/1992</td>
+                      <td>12/01/2021</td>
+                      <td>Instagram</td>
+                      <td>California</td>
+                      <td>Sim</td>
+                      <td> <a href="" title="Editar"><i class="bi bi-pencil me-3 text-secondary"></i></a> <a href="" title="Excluir"><i class="bi bi-trash text-danger"></i></a></td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+              </div>
+            </div>
             <!-- End Table with stripped rows -->
           </div>
         </div>
