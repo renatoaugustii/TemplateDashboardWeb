@@ -97,3 +97,38 @@ const handlePhone = (event) => {
     return value
   }
 
+// LISTA DE MULTISELECAO
+document.addEventListener('DOMContentLoaded', function () {
+    const listaOpcoes = document.getElementById('listaOpcoes');
+    const listaAdicionada = document.getElementById('listaAdicionada');
+    const btnAdicionar = document.getElementById('btnAdicionar');
+
+    function removerItem(event) {
+      const itemRemovido = event.target.closest('.card');
+      itemRemovido.remove();
+    }
+
+    btnAdicionar.addEventListener('click', function () {
+      const selectedOptions = Array.from(listaOpcoes.selectedOptions);
+      selectedOptions.forEach(function (option) {
+        if (!listaAdicionada.querySelector(`[data-value="${option.value}"]`)) {
+          const listItem = document.createElement('div');
+          listItem.classList.add('col-md-6', 'mb-3');
+          const card = document.createElement('div');
+          card.classList.add('card', 'h-100');
+          const cardBody = document.createElement('div');
+          cardBody.classList.add('card-body', 'd-flex', 'align-items-center');
+          cardBody.textContent = option.value;
+          const removeButton = document.createElement('button');
+          removeButton.type = 'button';
+          removeButton.classList.add('btn', 'btn-danger', 'btn-sm', 'ms-2');
+          removeButton.textContent = 'Remover';
+          removeButton.addEventListener('click', removerItem);
+          cardBody.appendChild(removeButton);
+          card.appendChild(cardBody);
+          listItem.appendChild(card);
+          listaAdicionada.appendChild(listItem);
+        }
+      });
+    });
+  });

@@ -242,14 +242,14 @@
       <li class="nav-heading">Cadastros</li>
 
       <li class="nav-item">
-        <a class="nav-link  collapsed" href="clientes.html">
+        <a class="nav-link collapsed " href="clientes.html">
           <i class="bi bi-people"></i>
           <span>Clientes</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link" href="parceiros.html">
+        <a class="nav-link collapsed" href="parceiros.html">
           <i class="bi bi-award"></i>
           <span>Parceiros</span>
         </a>
@@ -270,14 +270,14 @@
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="categorias.html">
+        <a class="nav-link  collapsed" href="categorias.html">
           <i class="bi bi-tag"></i>
           <span>Categorias</span>
         </a>
       </li><!-- End Error 404 Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="marcas.html">
+        <a class="nav-link" href="marcas.html">
           <i class="bi bi-bookmark"></i>
           <span>Marcas</span>
         </a>
@@ -312,11 +312,11 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Parceiros</h1>
+      <h1>Marcas</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active">Parceiros</li>
+          <li class="breadcrumb-item active">Marcas</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -326,126 +326,43 @@
         <div class="card">
           <div class="card-body">
             <div class="row">
-              <div class="col-md-4">
-                <h5 class="card-title">Tebela <span> | Todos os Parceiros</span></h5>
+              <div class="col-md-4 ">
+                <h5 class="card-title">Tabela <span> | Todos as marcas</span></h5>
               </div>
-              <div class="col-md-4 offset-md-4 p-4">
-                <div class="d-flex flex-row-reverse">
-                  <div class="p-2 ">
-                    <button type="button" class="btn btn-outline-secondary  d-none d-lg-block" data-bs-toggle="tooltip"
-                      data-bs-title="Imprimir Tabela">
-                      <i class="bi bi-printer"></i>
-                    </button>
-                  </div>
-                  <div class="p-2">
-                    <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal"
-                      data-bs-target="#ExtralargeModal" data-bs-title="Cadastrar novo cliente">
-                      <i class="bi bi-award me-2"></i>
-                      Novo
-                    </button>
-                    <div class="modal fade" id="ExtralargeModal" tabindex="-1">
-                      <div class="modal-dialog modal-lg">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" style="color:#00196A;">Cadastro de parceiros</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                          </div>
-                          <div class="modal-body">
-                               <!-- No Labels Form -->
-                              <form id="ADDRESS-FORM" class="row g-3 needs-validation" novalidate>
-                                <div class="col-md-6">
-                                  <label for="inputName5" class="form-label"><small>Nome Empresa</small></label>
-                                  <input type="text" class="form-control" placeholder="" required>
-                                </div>
-                                <div class="col-md-6">
-                                  <label for="inputName5" class="form-label"><small>Responsável</small></label>
-                                  <input type="text" class="form-control" placeholder="">
-                                </div>
-                                <div class="col-md-3">
-                                  <label for="inputName5" class="form-label"><small>Telefone 1</small></label>
-                                  <input type="tel" class="form-control" maxlength="15" onkeyup="handlePhone(event)" placeholder="" required>
-                                </div>
-                                <div class="col-md-3">
-                                  <label for="inputName5" class="form-label"><small>Telefone 2</small></label>
-                                  <input type="tel" class="form-control" maxlength="15" onkeyup="handlePhone(event)" placeholder="" required>
-                                </div>
-                                <div class="col-md-3 align-middle">
-                                  <label for="inputName5" class="form-label"><small>Tipo de Pessoa</small></label>
-                                  <div>
-                                    <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
-                                      <label class="form-check-label" for="inlineRadio1">CPF</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                      <label class="form-check-label" for="inlineRadio2">CNPJ</label>
-                                    </div>
-                                  </div>
-                                 
-                                </div>
-                                <div class="col-md-3">
-                                  <label for="inputName5" class="form-label"><small>CPF / CNPJ</small></label>
-                                  <input type="text" class="form-control" placeholder="" maxlength="14">
-                                </div>
-                                
-                                <hr>
-                                  <h6 class="modal-title mt-0 pt-0 " style="color:#00196A;">Endereço</h6>
-                                  <!-- Iniciando formulário de consulta de CEP -->
-                                  <div class="col-md-4">
-                                    <label for="inputName5" class="form-label"><small>Cep</small></label>
-                                    <div class="input-group">
-                                      <input id="CEP" name="CEP" type="text" class="form-control" placeholder="" aria-label="CEP" aria-describedby="button-addon2" maxlength="8" required>
-                                      <button onclick="buscar_cep()" class="btn btn-outline-primary" type="button" id="button-addon2"><i class="bi bi-search"></i></button>
-                                    </div>
-                                  </div>
-                                  <div class="col-md-6">
-                                    <label for="inputName5" class="form-label"><small>Rua</small></label>
-                                    <input id="logradouro" name="logradouro" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <div class="col-md-2">
-                                    <label for="inputName5" class="form-label"><small>Número</small></label>
-                                    <input id="NUMERO" name="NUMERO" type="text" class="form-control" placeholder="" required>
-                                  </div>
-
-                                  <div class="col-md-3">
-                                    <label for="inputName5" class="form-label"><small>Complemento</small></label>
-                                    <input  id="complemento" type="text" class="form-control" placeholder="">
-                                  </div>
-                                  <div class="col-md-3">
-                                    <label for="inputName5" class="form-label"><small>Bairro</small></label>
-                                    <input id="bairro" name="bairro" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <div class="col-md-4">
-                                    <label for="inputName5" class="form-label"><small>Cidade</small></label>
-                                    <input id="localidade" name="localidade" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <div class="col-md-2">
-                                    <label for="inputName5" class="form-label"><small>UF</small></label>
-                                    <input id="uf" NAME="uf" type="text" class="form-control" placeholder="" required>
-                                  </div>
-                                  <hr>
-                                  <h6 class="modal-title mt-2 pt-2" style="color:#00196A;">Dados adicionais</h6>
-                                 
-                                  <div class="col-12">
-                                    <label for="inputName5" class="form-label"><small>Observação</small></label>
-                                    <div class="input-group mb-3 mt-0">
-                                      <input type="text" class="form-control" maxlength="50" placeholder="">
-                                    </div>
-                                  </div>
-                                  <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sair</button>
-                                    <button type="submit" class="btn btn-outline-success">Salvar</button>
-                                  </div>
-                              </form><!-- End No Labels Form -->
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="col-md-4">
+              </div>
+              <div class="col-md-4 p-2 d-flex justify-content-end">
+                <button type="button" class="btn btn-outline-secondary" data-bs-toggle="tooltip"
+                  data-bs-title="Imprimir Tabela">
+                  <i class="bi bi-printer"></i>
+                </button>
               </div>
             </div>
+            <div class="row">
+              <form>
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 col-sm-12">
+                    <label for="" class="form-label"><small>Cadastrar marcas</small></label>
+                    <div class="input-group mb-4">
+                      <span class="input-group-text" id="inputGroupPrepend2"><i class="bi bi-bookmark"></i></span>
+                      <input type="text" class="form-control" aria-describedby="" required="">
+                    </div>
+                  </div>
+                  <div class="d-flex col-md-2 col-sm-12 align-items-center">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="gridCheck">
+                      <label class="form-check-label" for="gridCheck">
+                        Marca especial
+                      </label>
+                    </div>
+                  </div>
+                  <div class="d-flex col-md-6 col-sm-12 align-items-center">
+                    <button class="btn btn-primary" type="submit" id=""><i class="bi bi-arrow-down-circle me-2"></i>Inserir</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <hr>
             <!-- Table with stripped rows -->
             <div class="datatable-wrapper datatable-loading no-footer sortable searchable fixed-columns">
 
@@ -454,25 +371,17 @@
                   <thead>
                     <tr>
                       <th scope="col">#</th>
-                      <th scope="col">Nome</th>
-                      <th scope="col">Telefone</th>
-                      <th scope="col">Desde</th>
-                      <th scope="col">Bairro</th>
-                      <th scope="col">Origem</th>
+                      <th scope="col">Categoria</th>
                       <th scope="col">Ação</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                    <th scope="row">1</th>
-                      <td>Brandon Jacob</td>
-                      <td>(31) 999301215</td>
-                      <td>12/01/1992</td>
-                      <td>California</td>
-                      <td>Instagram</td>
-                      <td> <a href="" title="Editar"><i class="bi bi-pencil me-3 text-secondary"></i></a> <a href="" title="Excluir"><i class="bi bi-trash text-danger"></i></a></td>
+                      <th scope="row">1</th>
+                      <td>Blusa</td>
+                      <td><a href="" title="Editar"><i class="bi bi-pencil me-3 text-secondary"></i></a><a href=""
+                          title="Excluir"><i class="bi bi-trash text-danger"></i></a></td>
                     </tr>
-                    
                   </tbody>
                 </table>
               </div>
