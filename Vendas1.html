@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Sistema LavaMalu 1.0.0</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" type="text/css">
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- Template JS API File -->
+  <script src="assets/js/scripts.js" defer></script>
+</head>
+
+<style>
+
+
+
+/*Icon progressbar*/
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: #455A64;
+    padding-left: 0px;
+    margin-top: 30px;
+} 
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+}
+
+#progressbar .step0:before {
+     content: "\e900"; /* Código do ícone de uma casa no Bootstrap */
+    font-family: 'Glyphicons Halflings'; /* Fonte do Bootstrap para ícones */
+    color: #fff;
+}
+
+#progressbar li:before {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    background: #C5CAE9;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0px;
+}
+
+/*ProgressBar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 12px;
+    background: #C5CAE9;
+    position: absolute;
+    left: 0;
+    top: 16px;
+    z-index: -1;
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: -50%;
+}
+
+#progressbar li:nth-child(2):after, #progressbar li:nth-child(3):after {
+    left: -50%;
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    left: 50%;
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/*Color number of the step and the connector before it*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #651FFF;
+}
+
+#progressbar li.active:before {
+  content: "\e900"; /* Código do ícone de uma casa no Bootstrap */
+    font-family: 'Glyphicons Halflings'; /* Fonte do Bootstrap para ícones */
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.icon-content { 
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .icon-content {
+        width: 50%;
+    }
+}
+</style>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+
+    <div class="d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <span class="d-none d-lg-block">LavaMalu</span>
+      </a>
+      <i class="bi bi-list toggle-sidebar-btn"></i>
+    </div><!-- End Logo -->
+
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="fs-4 bi bi-bell"></i>
+            <span class="badge bg-danger badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+        <li class="nav-item me-4">
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <i class="fs-4 bi bi-question-circle rounded-circle" alt="Help"></i>
+          </a><!-- End Help Icon -->
+        </li>
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <i class="fs-4 bi bi-person-circle" alt="Profile"></i>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Administrador</span>
+          </a><!-- End Profile Image Icon -->
+
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6>Administrador</h6>
+              <span>Nível 3</span>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-person"></i>
+                <span>Meu Perfil</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-gear"></i>
+                <span>Configurações</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-bug"></i>
+                <span>Report Erro</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="#">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
+      </ul>
+    </nav><!-- End Icons Navigation -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
+
+    <ul class="sidebar-nav" id="sidebar-nav">
+
+      <li class="nav-heading">Ponto de Vendas</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-house"></i>
+          <span>Home</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-cart4"></i>
+          <span>Vender</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-upload"></i>
+          <span>Entregar</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-currency-dollar"></i>
+          <span>Pagamento</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-archive"></i>
+          <span>Inventário</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link  collapsed" href="#">
+          <i class="bi bi-truck"></i>
+          <span>Delivery</span>
+        </a>
+      </li><!-- End Home Nav -->
+
+      <li class="nav-heading">Cadastros</li>
+
+      <li class="nav-item">
+        <a class="nav-link " href="clientes.html">
+          <i class="bi bi-people"></i>
+          <span>Clientes</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="parceiros.html">
+          <i class="bi bi-award"></i>
+          <span>Parceiros</span>
+        </a>
+      </li><!-- End Contact Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="produtos.html">
+          <i class="bi bi-box"></i>
+          <span>Produtos</span>
+        </a>
+      </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="promocoes.html">
+          <i class="bi bi-flag"></i>
+          <span>Promoções</span>
+        </a>
+      </li><!-- End Login Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="categorias.html">
+          <i class="bi bi-tag"></i>
+          <span>Categorias</span>
+        </a>
+      </li><!-- End Error 404 Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="marcas.html">
+          <i class="bi bi-bookmark"></i>
+          <span>Marcas</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="defeitos.html">
+          <i class="bi bi-x-octagon"></i>
+          <span>Defeitos</span>
+        </a>
+      </li><!-- End Blank Page Nav -->
+
+      <li class="nav-heading">Gerencial</li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-speedometer2"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Profile Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+          <span>Relatórios</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+    </ul>
+
+  </aside><!-- End Sidebar-->
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Clientes</h1>
+      <nav>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item">Ponto de vendas</li>
+          <li class="breadcrumb-item">Vender</li>
+        </ol>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="section">
+
+
+        <div class="row d-flex justify-content-center">
+          <div class="col-12">
+          <ul id="progressbar" class="text-center">
+              <li class="active step0"></li>
+              <li class="active step0"></li>
+              <li class="step0"></li>
+              <li class="step0"></li>
+          </ul>
+          </div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm-6">
+          <h5>Escolher Cliente</h5>
+          <p class="text-secondary">Você está adicionando o cliente. Preencha as etapas a seguir para gerar o atendimento</p>
+        </div>
+        <div class="col-sm-6 pt-3">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
+            <input type="text" class="form-control" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="row mt-4">
+        <div class="col-sm-3 mb-3">
+          <a href="#">
+            <div class="card text-center" style="background-color: #012970; opacity: .8; height: 100%;">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <div class="row">
+                  <i class="bi bi-plus-lg text-white fs-2"></i>
+                </div>
+                <div class="row">
+                  <p class="card-text text-white">NOVO CLIENTE</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        
+        <div class="col-sm-3 mb-3">
+          <a href="#">
+            <div class="card text-center" style="background-color: #5F8ED5; opacity: .8; height: 100%;">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <div class="row mt-3 text-white">
+                  <h5>Renato Silva</h5>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="card-text text-white"><i class="bi bi-telephone me-2"></i>(31) 99930-1215</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-sm-3 mb-3">
+          <a href="#">
+            <div class="card text-center" style="background-color: #5F8ED5; opacity: .8; height: 100%;">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <div class="row mt-3 text-white">
+                  <h5>Renato Silva</h5>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="card-text text-white"><i class="bi bi-telephone me-2"></i>(31) 99930-1215</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-sm-3 mb-3">
+          <a href="#">
+            <div class="card text-center" style="background-color: #5F8ED5; opacity: .8; height: 100%;">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <div class="row mt-3 text-white">
+                  <h5>Renato Silva</h5>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="card-text text-white"><i class="bi bi-telephone me-2"></i>(31) 99930-1215</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-sm-3 mb-3">
+          <a href="#">
+            <div class="card text-center" style="background-color: #5F8ED5; opacity: .8; height: 100%;">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <div class="row mt-3 text-white">
+                  <h5>Renato Silva</h5>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="card-text text-white"><i class="bi bi-telephone me-2"></i>(31) 99930-1215</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-sm-3 mb-3">
+          <a href="#">
+            <div class="card text-center" style="background-color: #5F8ED5; opacity: .8; height: 100%;">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <div class="row mt-3 text-white">
+                  <h5>Renato Silva</h5>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="card-text text-white"><i class="bi bi-telephone me-2"></i>(31) 99930-1215</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+
+        <div class="col-sm-3 mb-3">
+          <a href="#">
+            <div class="card text-center" style="background-color: #5F8ED5; opacity: .8; height: 100%;">
+              <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                <div class="row mt-3 text-white">
+                  <h5>Renato Silva </h5>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <p class="card-text text-white"><i class="bi bi-telephone me-2"></i>(31) 99930-1215</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+               
+      
+      </div>
+      
+      
+      <!-- Adicione mais linhas de cards conforme necessário -->
+      
+      
+      
+      
+    </section>  
+    
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      Desenvolvido por <strong><span>Rebot</span></strong> &copy; 2023
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+    <i class="bi bi-arrow-up-short"></i>
+  </a>
+
+    <!-- Vendor JS Files -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
